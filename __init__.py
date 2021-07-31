@@ -123,9 +123,10 @@ def setUpLegend(new_state, old_state):
                 }
                 
                 #bottom-fix{
-                     align-items: center;
+                    display: flex;
+                    align-items: center;
                     position: fixed; 
-                    bottom: 0px;    
+                    bottom: 0;    
                     left: 0;
                     right: 0;
                     justify-content: center;
@@ -138,7 +139,7 @@ def setUpLegend(new_state, old_state):
    
                 .tooltip {
                   position: relative;
-                  display: inline-block;
+                  display: block;
                 }
                 
                 .tooltip .tooltiptext {
@@ -151,21 +152,27 @@ def setUpLegend(new_state, old_state):
                   text-align: center;
                   border-radius: 6px;
                   padding: 5px 0;
-                  position: static;
+                  position: absolute;
                   z-index: 1;
-                  bottom: 200%;
-                  left: 50%;
+                  display: flex;
+                  bottom: 40px;
                   font-size: 20px;
                 }
 
                 .tooltip .tooltiptext::after {
-                  content: "";
-                  position: static;
-                  bottom: 100%;
-                  left: 50%;
-                  border-width: 5px;
-                  border-style: solid;
-                  border-color: transparent transparent black transparent;
+                      content: " ";
+                      position: absolute;
+                      left: 8px;
+                      bottom: -15px;
+                      border-top: 15px solid black;
+                      border-right: 15px solid transparent;
+                      border-left: 15px solid transparent;
+                      border-bottom: none;
+                      display: flex;
+                      border-radius: 1px;
+                      border-width: 10px;
+                      border-style: solid;
+                      border-color: black transparent transparent black;
                 }
 
                 
